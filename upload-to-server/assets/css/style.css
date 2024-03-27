@@ -221,10 +221,7 @@ ol {
 }
 
 .direksi .dewan-direksi {
-  /* border-width: 3px;
-  border-style: solid; */
-  background: linear-gradient(180deg, #85c224, #0a6e9f);
-  background-clip: padding-box;
+  border: 3px solid #85c224;
   border-radius: 20px;
   padding: 18px;
   margin: 0 auto;
