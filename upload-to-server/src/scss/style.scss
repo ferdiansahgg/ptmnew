@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Futura Bold';
+  src: url('../fonts/futura-bold-font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+// Global style
+@import "./variables";
+@import "./mixins";
+@import "./global";
+
+// Component
+@import "./components/header";
+@import "./components/banner";
+@import "./components/about";
+@import "./components/event";
+@import "./components/visi";
+@import "./components/program";
+@import "./components/footer";
