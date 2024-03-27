@@ -28,6 +28,51 @@ h2.heading {
   font-weight: 700;
 }
 
+:root {
+  --gradient: linear-gradient(90deg, #0a6e9f, #85c224);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar */
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  padding: 20px;
+}
+/* End of Navbar */
+
+h2 {
+  font-weight: 700;
+}
+
+.divider {
+  width: 82px;
+  height: 4px;
+  background: var(--gradient);
+  margin: 32px 0;
+}
+
+.text {
+  color: #707070;
+  line-height: 2;
+}
+
 /* Navigasi */
 .navigasi {
   position: relative;
@@ -53,11 +98,8 @@ h2.heading {
 }
 
 /* Visi & Misi */
-.misi {
-  margin: 5rem 0;
-}
 ol {
-  margin-left: -1rem;
+  margin-left: -16px;
 }
 
 /* Nilai Perusahaan */
@@ -70,11 +112,11 @@ ol {
   margin: 0 0.5rem;
 }
 
-.nilai-perusahaan .card p {
+.nilai-perusahaan .card .nilai {
   color: white;
   width: 3.25rem;
   height: 3rem;
-  font-size: 1.5rem;
+  font-size: 20px;
   padding: 0.3rem;
 }
 
@@ -85,50 +127,116 @@ ol {
 .nilai-perusahaan .card .lak {
   background-color: #18a4b3;
 }
+
+@media screen and (max-width: 576px) {
+  .navigasi .container ul li a {
+    font-size: 8px;
+    gap: 20px;
+  }
+  .nilai-perusahaan .card .fw-bold {
+    font-size: 10px;
+  }
+  .direksi .dewan-direksi {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .direksi .dewan-direksi img {
+    width: 100%;
+  }
+  .direksi .dewan-direksi .paragraf {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigasi .container ul li a {
+    font-size: 8px;
+    gap: 30px;
+  }
+  .direksi .presiden-direksi {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .direksi .presiden-direksi img {
+    width: 50%;
+    height: auto;
+  }
+  .nilai-perusahaan .card .fw-bold {
+    font-size: 10px;
+  }
+  .direksi .dewan-direksi {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .direksi .dewan-direksi img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navigasi .container ul {
+    font-size: 12px;
+    gap: 20px;
+  }
+  .direksi .presiden-direksi img {
+    width: 50%;
+  }
+  .direksi .dewan-direksi {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .direksi .dewan-direksi img {
+    width: 70%;
+    height: 50%;
+  }
+}
 /* Nilai Perusahaan End */
 
 /* Profile Perusahaan */
 .profile {
-  margin: 6rem auto;
+  margin: 72px auto;
 }
 .profile p {
-  padding: 0.5rem 9rem;
+  padding: 8px 144px;
 }
 /* Profile Perusahaan End */
 
 /* Dewan Direksi */
 .direksi {
   text-align: center;
-  margin: 5rem auto;
+  margin: 80px auto;
 }
 
 .direksi .presiden-direksi {
   background-color: rgba(133, 194, 36, 0.1);
+  position: relative;
 }
 
 .direksi .dewan-direksi {
-  border: 3px solid #85c224;
+  /* border-width: 3px;
+  border-style: solid; */
+  background: linear-gradient(180deg, #85c224, #0a6e9f);
+  background-clip: padding-box;
   border-radius: 20px;
+  padding: 18px;
   margin: 0 auto;
-  /* max-width: 75%; */
+  line-height: 2;
+  position: relative;
 }
 
-.direksi .image-direksi {
-  margin-left: -8rem;
-  margin-bottom: -2rem;
-}
-
-.direksi .dewan-direksi h3 {
-  color: black;
+.direksi .dewan-direksi img {
+  margin-left: -156px;
+  margin-bottom: -18px;
 }
 /* Dewan Direksi End */
-
-/* Struktur Organisasi */
-.struktur-organisasi {
-  text-align: center;
-  margin: 5rem auto;
-  width: 80%;
-}
 
 .sparator {
   margin-top: 30px;
