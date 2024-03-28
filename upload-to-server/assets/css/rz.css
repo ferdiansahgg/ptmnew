@@ -374,11 +374,15 @@
   transition: background-color 200ms linear;
 }
 
-.navbar.fixed-top.scrolled .navbar-brand img {
-  background-image: url("../img/logopf-color.png");
-  background-repeat: no-repeat;
-  z-index: 1;
+.navbar.fixed-top .navbar-brand .brand-color,
+.navbar.fixed-top.scrolled .navbar-brand .normal {
+  display: none;
 }
+
+.navbar.fixed-top.scrolled .navbar-brand .brand-color {
+  display: block;
+}
+
 .navbar.fixed-top.scrolled .nav-link,
 .navbar.fixed-top.scrolled .nav-search i {
   color: #292929;
