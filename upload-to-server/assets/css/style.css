@@ -97,6 +97,9 @@ h2 {
   text-decoration: none;
 }
 
+.carousel-control-prev-icon .prev {
+  transform: rotate(180deg);
+}
 /* Visi & Misi */
 ol {
   margin-left: -16px;
