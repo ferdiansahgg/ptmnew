@@ -351,6 +351,7 @@ ol {
   color: #fff;
   font-family: "Poppins Bold", sans-serif;
   font-size: 35px;
+  margin-bottom: -50%;
 }
 .banner .carousel-inner .carousel-item .carousel-caption h2 span {
   color: #85c224 !important;
@@ -601,7 +602,7 @@ a > i {
 
 i {
   /* Define the color of the icon */
-  color: black; /* Change this to the desired color */
+   /* Change this to the desired color */
   transition: color 0.3s; /* Add a smooth color transition */
 
   /* Add a hover effect */
@@ -1024,4 +1025,9 @@ i:hover {
   padding: var(--padding-7xs) var(--padding-6xs) var(--padding-7xs) var(--padding-xs);
   gap: var(--gap-9xs);
   z-index: 1;
+}
+
+span.spanPoppins {
+  /* font-family: "Poppins Bold", sans-serif; */
+  font-weight: bold;
 }
