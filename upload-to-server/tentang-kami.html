@@ -401,25 +401,6 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
         el.style.opacity = '0.5';
         el.style.paddingBottom = '30';
       });
-      // alert(element);
-      if(element == '.n2,.n3,.n4,.n5,.n6'){
-        $('.detail-amanah').show();
-      }
-      if(element == '.n1,.n3,.n4,.n5,.n6'){
-        $('.detail-kompeten').show();
-      }
-      if(element == '.n1,.n2,.n4,.n5,.n6'){
-        $('.detail-harmonis').show();
-      }
-      if(element == '.n1,.n2,.n3,.n5,.n6'){
-        $('.detail-loyal').show();
-      }
-      if(element == '.n1,.n2,.n3,.n4,.n6'){
-        $('.detail-adaptif').show();
-      }
-      if(element == '.n1,.n2,.n3,.n4,.n5'){
-        $('.detail-kolaboratif').show();
-      }
     }
     function normal(){
       [].forEach.call(document.querySelectorAll('.n1,.n2,.n3,.n4,.n5,.n6'), function (el) {
@@ -427,7 +408,6 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
         el.style.opacity = '1';
         el.style.paddingBottom = '10';
       });
-      $('.detail_akhlak').hide();
     }
 </script>
 </body>
