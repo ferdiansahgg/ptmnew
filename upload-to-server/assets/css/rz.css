@@ -80,11 +80,12 @@
   border-radius: 15px;
 }
 
-.partner-carousel .slick-prev,
+/* .partner-carousel .slick-prev,
 .partner-carousel .slick-next {
   background: #85c224;
   border-radius: 50%;
-}
+} */
+
 .partner-carousel .slick-prev,
 .partner-carousel .slick-next {
   margin-right: -15px;
@@ -95,6 +96,31 @@
 .partner-carousel .slick-slide img {
   margin: auto;
 }
+
+button.slick-next.slick-arrow::before {
+  content: url("../img/arrow-partner.svg");
+  position: absolute;
+  top: -5px;
+  right: -7px;
+}
+
+button.slick-next::before,
+button.slick-prev::before {
+  opacity: 1;
+}
+
+button.slick-prev.slick-arrow::before {
+  content: url("../img/arrow-partner.svg");
+  transform: rotate(-180deg);
+  position: absolute;
+  top: -5px;
+  right: -7px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+
 .berita .card {
   margin: auto;
   border-radius: 15px;
