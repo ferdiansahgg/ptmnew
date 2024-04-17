@@ -35,6 +35,13 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
   <title>Pertamina Foundation</title>
+  <style type="text/css">
+    @media screen and (max-width: 768px) {
+        .profile p{
+            padding: 10px;
+        }
+    }
+  </style>
 </head>
 <body>
 
@@ -181,28 +188,28 @@
             </div>
         </div>
     </div>
-        <div class="container d-flex justify-content-center">
-            <div class="card">
+        <div class="container d-flex justify-content-center" onmouseout="normal()">
+            <div class="card n1" onmouseover="change('.n2,.n3,.n4,.n5,.n6')" onmouseout="normal();" style="filter: grayscale(100%);opacity: 0.5;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" data-bs-title="<b>AMANAH<br>Memegang teguh kepercayaan yang diberikan<b><br><p style='text-align:left'>Memenuhi janji dan komitmen Bertanggung jawab atas tugas, keputusan dan tindakan yang dilakukan Berpegang teguh kepada nilai moral dan etika</p>">
                 <p class="rounded-circle nilai akh">A</p>
                 <p class="fw-bold">Amanah</p>
             </div>
-            <div class="card">
+            <div class="card n2" onmouseover="change('.n1,.n3,.n4,.n5,.n6')" onmouseout="normal();" style="filter: grayscale(100%);opacity: 0.5;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" data-bs-title="<b>KOMPETEN<br>Terus belajar dan mengembangkan kapabilitas<b><br><p style='text-align:left'>Meningkatkan kompetensi diri untuk menjawan tantangan yang selalu berubah Membantu orang lain belajar Menyelesaikan tugas dengan kualitas terbaik</p>">
                 <p class="rounded-circle nilai akh">K</p>
                 <p class="fw-bold">Kompeten</p>
             </div>
-            <div class="card">
+            <div class="card n3" onmouseover="change('.n1,.n2,.n4,.n5,.n6')" onmouseout="normal();" style="filter: grayscale(100%);opacity: 0.5;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" data-bs-title="<b>HARMONIS<br>Saling peduli dan menghargai perbedaan<b><br><p style='text-align:left'>Menghargai setiap orang apapun latar belakangnya Suka menolong orang lain Membangun lingkungan kerja yang kondusif</p>">
                 <p class="rounded-circle nilai akh">H</p>
                 <p class="fw-bold">Harmonis</p>
             </div>
-            <div class="card">
+            <div class="card n4" onmouseover="change('.n1,.n2,.n3,.n5,.n6')" onmouseout="normal();" style="filter: grayscale(100%);opacity: 0.5;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" data-bs-title="<b>LOYAL<br>Berdedikasi dan mengutamakan kepentingan bangsa dan Negara<b><br><p style='text-align:left'>Menjaga nama baik sesama karyawan, pimpinan, BUMN, dan Negara Rela berkorban untuk mencapai tujuan yang lebih besar Patuh pada pimpinan sepanjang tidak bertentangan dengan hukum dan etika</p>">
                 <p class="rounded-circle nilai lak">L</p>
             <p class="fw-bold">Loyal</p>
             </div>
-            <div class="card">
+            <div class="card n5" onmouseover="change('.n1,.n2,.n3,.n4,.n6')" onmouseout="normal();" style="filter: grayscale(100%);opacity: 0.5;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" data-bs-title="<b>ADAPTIF<br>Cepat menyesuaikan diri untuk menjadi lebih baik Terus menerus melakukan perbaikan mengikuti perkembangan teknologi Bertindak proaktif</p>">
                 <p class="rounded-circle nilai lak">A</p>
                 <p class="fw-bold">Adaptif</p>
             </div>
-            <div class="card">
+            <div class="card n6" onmouseover="change('.n1,.n2,.n3,.n4,.n5')" onmouseout="normal();" style="filter: grayscale(100%);opacity: 0.5;" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" data-bs-title="<b>KOLABORATIF<br>Membangun kerjasama yang sinergi<b><br><p style='text-align:left'>Memberi kesempatan kepada berbagai pihak yang berkontribusi Terbuka dalam bekerja sama untuk menghasilkan nilai tambah Menggerakkan pemanfaatan berbagai sumber daya untuk tujuan bersama</p>">
                 <p class="rounded-circle nilai lak">K</p>
                 <p class="fw-bold">Kolaboratif</p>
             </div>
@@ -234,7 +241,7 @@
             <div class="col">
                 <div class="presiden-direksi rounded-5 d-flex text-start ">
                     <img src="assets/img/direksi.png" alt="presiden-direksi" />
-                    <div class="my-5">
+                    <div class="my-5 px-3 px-md-0 px-lg-0">
                         <h3 class="fw-bold">Agus Mashud S Asnagari</h3>
                         <p class="text">Presiden Direktur Pertamina Foundation</p>
                         <p class="text">
@@ -367,7 +374,10 @@
   <script src="./assets/js/bootstrap.bundle.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/jssor.slider-28.1.0.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script type="text/javascript">
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     $(function () {
       $(document).scroll(function () {
         var $nav = $(".navbar.fixed-top");
@@ -379,9 +389,9 @@
     let logo = document.getElementById("logo");
 
 // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-      scrollFunction();
-    };
+    // window.onscroll = function () {
+    //   scrollFunction();
+    // };
 
 
 // When the user clicks on the button, scroll to the top of the document
@@ -391,6 +401,21 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+  function change(element){
+      [].forEach.call(document.querySelectorAll(element), function (el) {
+        el.style.filter = 'grayscale(100%)';
+        el.style.opacity = '0.5';
+        el.style.paddingBottom = '30';
+      });
+    }
+    function normal(){
+      [].forEach.call(document.querySelectorAll('.n1,.n2,.n3,.n4,.n5,.n6'), function (el) {
+        el.style.filter = 'none';
+        el.style.opacity = '1';
+        el.style.paddingBottom = '10';
+      });
+    }
 </script>
 </body>
 </html>
